@@ -1,0 +1,72 @@
+
+<!--//继承于base_foot.html页面-->
+{% extends 'base_foot.html' %}
+
+{% load static from staticfiles %}
+
+<!--//注册按钮代码-->
+{% block head %}
+<script type="text/javascript" src="{% static  'js/register.js' %}"></script>
+{% endblock head %}
+
+
+{% block body %}
+	<div class="register_con">
+		<div class="l_con fl">
+			<a class="reg_logo"><img src="/static/images/logo02.png"></a>
+			<div class="reg_slogan">足不出户  ·  新鲜每一天</div>
+			<div class="reg_banner"></div>
+		</div>
+
+		<div class="r_con fr">
+			<div class="reg_title clearfix">
+				<h1>用户注册</h1>
+				<a href="/user/login/">登录</a>
+			</div>
+			<div class="reg_form clearfix">
+
+                <!--//action中写入form表单要提交到的地方，register_handle需要在view函数中定义-->
+				<form action="/user/register_handle/" id="reg_form" method="post">
+                    {% csrf_token %}
+                    <ul>
+                        <li>
+                            <label>用户名:</label>
+
+                            <!--//只有设置了 name 属性的表单元素才能在提交表单时传递它们的值，一般和id值一致。-->
+                            <input type="text" name="user_name" id="user_name">
+                            <span class="error_tip">提示信息</span>
+                        </li>
+                        <li>
+                            <label>密码:</label>
+                            <input type="password" name="pwd" id="pwd">
+                            <span class="error_tip">提示信息</span>
+                        </li>
+                        <li>
+                            <label>确认密码:</label>
+                            <input type="password" name="cpwd" id="cpwd">
+                            <span class="error_tip">提示信息</span>
+                        </li>
+                        <li>
+                            <label>邮箱:</label>
+                            <input type="text" name="email" id="email">
+                            <span class="error_tip">提示信息</span>
+                        </li>
+                        <li class="agreement">
+                            <!-- checked="checked"中的值可以为任何值，也可以只写成checked,不要后面的值 -->
+                            <input type="checkbox" name="allow" id="allow" checked="checked">
+                            <label>同意”天天生鲜用户使用协议“</label>
+                            <span class="error_tip2">提示信息</span>
+                        </li>
+                        <li class="reg_sub">
+                            <input  type="submit" value="注 册" name="">
+{#                            <button type="submit" value="注 册"></button>#}
+                        </li>
+                    </ul>
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+{% endblock body %}
