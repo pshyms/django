@@ -15,18 +15,18 @@ apps: 用于应用过多时，都放于这个目录下，然后将apps目录右�
 
 
 4. 配置django连接mysql
-在setting.py大概80行找到DATABASES代码段，默认是sqlites，我们修改为mysql如下，库名要事先写好
 
-安装pymysql模块：pip install pymysql
+4.1 在setting.py大概80行找到DATABASES代码段，默认是sqlites，我们修改为mysql如下，库名要事先写好
+![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/mysql.png)
+
+4.2 安装pymysql模块：
+pip install pymysql
 python3 pymysql就是MySQLdb,基本使用方法：import pymysql as MySQLdb
-
 django 中使用方法，在项目djangostart目录里的__init__.py中加入
 import pymysql
 pymysql.install_as_MySQLdb()
 
-
-执行python manage.py migrate 首次执行，生成项目需要的一些基本数据库
-
+4.3执行python manage.py migrate 首次执行，生成项目需要的一些基本数据库
 
 
 5. 配置message_form.html页面展示出来
@@ -35,15 +35,16 @@ pymysql.install_as_MySQLdb()
 ![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/DIRS.png)
 
 5.2 djangostart/urls.py中添加代码
-
+![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/urls.png)
 
 5.3  DjangoGetStarted/settings.py 57行左右修templates代码块中的DIRS为如下，来指定模板位置
-
+![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/DIRS.png)
 
 5.4 页面出来后，没css样式，原因是css文件没找到，这是因为在settings.py中我们只是指定了静态文件目录名
+![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/DIRS.png)
 
 但是没指定静态文件查找的跟路径，所以还需添加如下代码
-
+![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/STATICFILES_DIRS.png)
 
 
 
