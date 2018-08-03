@@ -1,20 +1,20 @@
 
 1. 创建一个新项目后，新建一个应用程序
 
-python manager.py startapp message
+   python manager.py startapp message
 
 
 2. 在message同级目录下创建3个目录static, log, media，apps目录，
 
-static：存放静态文件，包括js,css,图片等
-log：存放网站日志文件
-media：存放用户上传的图片等资源
-apps: 用于应用过多时，都放于这个目录下，然后将apps目录右键mark成Source Root
+   static：存放静态文件，包括js,css,图片等
+   log：存放网站日志文件
+   media：存放用户上传的图片等资源
+   apps: 用于应用过多时，都放于这个目录下，然后将apps目录右键mark成Source Root
 
-3.  存放静态文件
+3. 存放静态文件
 
-将message_form.html文件放在templates文件夹下
-在static目录下新建css目录，并在css目录下新建stylesheet格式的style文件，将message_form.html文件中的<style>标签内容剪切到style.css文件中，首尾<style>去掉，shift+tab使css格式整齐
+   将message_form.html文件放在templates文件夹下
+   在static目录下新建css目录，并在css目录下新建stylesheet格式的style文件，将message_form.html文件中的<style>标签内容剪切到style.css文件中，首尾    <style>去掉，shift+tab使css格式整齐
 
 
 4. 配置django连接mysql
