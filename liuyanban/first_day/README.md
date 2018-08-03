@@ -43,7 +43,7 @@ pymysql.install_as_MySQLdb()
 5.4 页面出来后，没css样式，原因是css文件没找到，这是因为在settings.py中我们只是指定了静态文件目录名
 ![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/DIRS.png)
 
-但是没指定静态文件查找的跟路径，所以还需添加如下代码
+5.5 但是没指定静态文件查找的跟路径，所以还需添加如下代码
 ![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/STATICFILES_DIRS.png)
 
 
