@@ -37,7 +37,7 @@ apps: 用于应用过多时，都放于这个目录下，然后将apps目录右�
 
     5.1 message/views.py中添加如下代码：
 		
-		![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/views.png)
+    ![image](https://github.com/pshyms/django/blob/master/liuyanban/first_day/images-folder/views.png)
 
     5.2 djangostart/urls.py中添加代码
 		
