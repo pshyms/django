@@ -1,3 +1,4 @@
+
 1. 创建一个新项目后，新建一个应用程序
 python manager.py startapp message
 
