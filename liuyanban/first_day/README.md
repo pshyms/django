@@ -30,8 +30,9 @@ pymysql.install_as_MySQLdb()
 5. 配置message_form.html页面展示出来
 
 5.1 message/views.py中添加如下代码：
-![image](https://github.com/pshyms/django/liuyanban/first_day/images-folder/mysql.png)
+![image](https://github.com/pshyms/django/liuyanban/first_day/images-folder/mysql.png?raw=true)
 
+django/liuyanban/first_day/images-folder/mysql.png
 5.2 djangostart/urls.py中添加代码
 
 
